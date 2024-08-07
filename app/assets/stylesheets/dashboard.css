@@ -1,0 +1,122 @@
+#container {
+    display: inline-block;
+    position: relative;
+    max-width: 50vh;
+    max-height: 80vh;
+    overflow: hidden; 
+    padding: 2vh;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    background-color: rgb(132, 37, 255);
+    border-radius: 18px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vh;
+    color: white; 
+    text-align: center; 
+}
+
+.button:hover {
+    background-color: rgb(101, 25, 201);
+}
+
+ul {
+    list-style-type: none;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: fit-content; 
+    width: 100%;
+    overflow-y: auto; 
+}
+
+.task {
+    text-align: center;
+    /* border: 1px solid red; */
+    /* box-shadow: 0px 0px 15px #fff; */
+    animation: colorslide 10s ease-in-out infinite; 
+    padding: 1vh 1vh;
+    border-radius: 18px;
+    margin-top: 3vh;
+    width: 90%; 
+    height: fit-content; 
+    box-sizing: border-box; 
+}
+
+
+@keyframes colorslide {
+    0% {
+        box-shadow: 0px 0px 15px rgb(0, 150, 196);
+    }
+    30% {
+        box-shadow: 0px 0px 15px rgba(111, 0, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0px 0px 15px rgb(0, 150, 196);
+    }
+    70% {
+        box-shadow: 0px 0px 15px rgb(15, 209, 135);
+    }
+    100% {
+        box-shadow: 0px 0px 15px rgb(0, 150, 196);
+    }
+}
+
+#welcome {
+    /* overflow: hidden; */
+    color: white;
+    font-size: 3vh;
+    white-space: nowrap;
+    width: 0;
+    animation: sliding;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sliding {
+    from { width: 0 }
+    to { width: 100%; text-shadow: 5px 5px 5px rgba(0, 0, 0, 1); }
+  }
+
+/* https://www.google.com/search?q=typing+animation+css&oq=typing+animation+css&gs_lcrp=EgZjaHJvbWUqDAgAEAAYFBiHAhiABDIMCAAQABgUGIcCGIAEMgwIARAAGBQYhwIYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDczajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:996865ab,vid:yefgBA1CecI,st:0 */
+
+/* Custom Scrollbar Styles for WebKit Browsers */
+
+/* Scrollbar container */
+ul::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track (the area the thumb slides within) */
+ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Scrollbar thumb (the draggable part) */
+ul::-webkit-scrollbar-thumb {
+    background: #555; /* Background color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Scrollbar thumb on hover */
+ul::-webkit-scrollbar-thumb:hover {
+    background: #444; /* Background color when hovering over the scrollbar thumb */
+}
+
+/* Optional: Custom scrollbar corner (where horizontal and vertical scrollbars meet) */
+ul::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Background color for the scrollbar corner */
+}

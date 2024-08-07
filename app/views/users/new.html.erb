@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up - MyApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+</head>
+<body>
+  <div id="container">
+    <h1>Sign Up</h1>
+    <%= form_with model: @user, local: true do |form| %>
+      <div id="username">
+        <label for="username_input" id="username_label">Username:</label>
+        <%= form.text_field :username, id: 'username_input', required: true %>
+      </div>
+      <div id="password">
+        <label for="password_input" id="password_label">Password:</label>
+        <%= form.password_field :password, id: 'password_input', required: true %>
+      </div>
+      <div id="logdiv">
+        <%= form.submit 'Sign Up', id: 'signup' %>
+      </div>
+    <% end %>
+  </div>
+</body>
+</html>

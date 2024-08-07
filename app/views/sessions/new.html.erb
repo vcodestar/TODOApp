@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+</head>
+<body>
+  <div id="container">
+    <h1>Welcome to My TO-DO App!</h1>
+    
+    <!-- Login Form -->
+    <%= form_with url: login_path, method: :post, local: true do |form| %>
+      <div id="username">
+        <label for="username_input" id="username_label">Username:</label>
+        <%= form.text_field :username, id: 'username_input', required: true %>
+      </div>
+      <div id="password">
+        <label for="password_input" id="password_label">Password:</label>
+        <%= form.password_field :password, id: 'password_input', required: true %>
+      </div>
+      <div id="logdiv">
+        <%= form.submit 'Log In', id: 'login' %>
+      </div>
+    <% end %>
+    
+    <div id="signup-prompt">
+      Not signed up yet? <a href="<%= signup_path %>">Sign up</a>
+    </div>
+  </div>
+  <%= yield %>
+</body>
+</html>
