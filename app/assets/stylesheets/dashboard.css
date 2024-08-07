@@ -8,6 +8,24 @@
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+button {
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: rgb(132, 37, 255);
+    border: none;
+    border-radius: 18px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 2vh;
+    font-size: 1.5vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(101, 25, 201);
+}
+
 .button {
     position: absolute; 
     top: 15px; 
@@ -36,6 +54,8 @@ ul {
     height: fit-content; 
     width: 100%;
     overflow-y: auto; 
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
 
 .task {
