@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %> 
+  <%= stylesheet_link_tag 'tasks', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <h1>New Task</h1>
+
+        <%= form_with model: @task, local: true do |form| %>
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
+
+        <div>
+            <%= form.submit 'Create Task' %>
+        </div>
+        <% end %>
+
+        <div id="back"><%= link_to 'Back to Tasks', tasks_path, class: 'button' %></div>
+    </div>
+</body>
+</html>

@@ -1,16 +1,21 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
   # Root route
   root 'pages#home'
 
   # Routes for posts resource
   resources :posts
+  
+  # Routes for tasks resource
+  resources :tasks, only: [:index, :new, :create, :destroy] do
+    member do
+      patch :complete
+    end
+  end
 
   # Routes for sessions (login/logout)
   get 'login', to: 'sessions#new', as: 'login'     # Show the login form
-  get 'logout', to: 'pages#home', as: 'logout'     # Show the login form
   post 'login', to: 'sessions#create'              # Process login form submissions
-  # delete 'logout', to: 'sessions#destroy', as: 'logout'  # Log out the user
+  get 'logout', to: 'sessions#destroy', as: 'logout'  # Log out the user
 
   # Dashboard route
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'

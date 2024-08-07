@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(password)
       Rails.logger.info "Successful login for username: #{username}"
       session[:user_id] = user.id
-      redirect_to dashboard_path, notice: 'Logged in successfully!'
+      redirect_to tasks_path, notice: 'Logged in successfully!'
     else
       Rails.logger.warn "Failed login attempt for username: #{username}"
       flash.now[:alert] = 'Invalid username or password'

@@ -5,10 +5,9 @@
     max-height: 80vh;
     overflow: hidden; 
     padding: 2vh;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
-button {
+#add-note {
     font-family: fantasy;
     letter-spacing: 0.5px;
     color: white;
@@ -23,11 +22,11 @@ button {
     margin-bottom: 1vh;
 }
 
-button:hover {
+#add-note:hover {
     background-color: rgb(101, 25, 201);
 }
 
-.button {
+#logout_div {
     position: absolute; 
     top: 15px; 
     right: 15px; 
@@ -40,7 +39,7 @@ button:hover {
     text-align: center; 
 }
 
-.button:hover {
+#logout_div:hover {
     background-color: rgb(101, 25, 201);
 }
 
