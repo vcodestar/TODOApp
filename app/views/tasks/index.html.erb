@@ -14,14 +14,14 @@
     <p id="welcome">Welcome back, <%= current_user.username %></p>
     
     <!-- Updated Add Task Button with link -->
-    <div id="add-note"><%= link_to 'Add Task', new_task_path%><i class="fas fa-plus"></i></div>
+    <div id="add-note"><%= link_to 'Add Task', new_task_path %><i class="fas fa-plus"></i></div>
 
     <ul>
       <% @tasks.each do |task| %>
         <li class="task <%= 'completed' if task.completed %>">
           <div class="task-name"><%= task.name %></div>
           <% unless task.completed %>
-            <%= link_to complete_task_path(task), method: :patch, class: 'checkout' do %>
+            <%= link_to complete_task_path(task), method: :patch, data: { confirm: 'Are you sure you want to mark this task as complete?' }, class: 'checkout' do %>
               Check <i class="fas fa-check"></i>
             <% end %>
           <% end %>
@@ -29,7 +29,7 @@
       <% end %>
     </ul>
 
-    <div id="logout_div"><%= link_to 'Log Out', logout_path, method: :delete, class: "logout_class"%></div>
+    <div id="logout_div"><%= link_to 'Log Out', logout_path, method: :delete, class: "logout_class" %></div>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>New Task</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %> 
-  <%= stylesheet_link_tag 'tasks', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="container">
-        <h1>New Task</h1>
+  <div id="container">
+    <h1>Create New Task</h1>
 
-        <%= form_with model: @task, local: true do |form| %>
-        <div>
-            <%= form.label :name %>
-            <%= form.text_field :name %>
+    <div id="task-form">
+      <%= form_with model: @task, local: true, class: 'task-form' do |form| %>
+        <div id="task-input" class="form-group">
+          <%= form.label :name, 'Task Name', class: 'form-label' %>
+          <%= form.text_field :name, class: 'task-input-field form-control', placeholder: 'Enter task name' %>
         </div>
-
-        <div>
-            <%= form.submit 'Create Task' %>
-        </div>
+        
+        <div id="btns">
+            <%= form.submit 'Create Task', class: 'create-task-btn btn btn-primary' %>
         <% end %>
 
-        <div id="back"><%= link_to 'Back to Tasks', tasks_path, class: 'button' %></div>
+        <div id="back" class="mt-3">
+            <%= link_to 'Back to Tasks', tasks_path, class: 'back-btn' %>
+        </div>
+        </div>
     </div>
+  </div>
 </body>
 </html>

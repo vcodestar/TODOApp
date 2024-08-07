@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # Routes for posts resource
   resources :posts
-  
+
   # Routes for tasks resource
   resources :tasks, only: [:index, :new, :create, :destroy] do
     member do
@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   end
 
   # Routes for sessions (login/logout)
-  get 'login', to: 'sessions#new', as: 'login'     # Show the login form
-  post 'login', to: 'sessions#create'              # Process login form submissions
-  get 'logout', to: 'sessions#destroy', as: 'logout'  # Log out the user
+  get 'login', to: 'sessions#new', as: 'login'
+  post 'login', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   # Dashboard route
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'

@@ -84,23 +84,21 @@ ul {
     border-radius: 18px;
     margin-top: 3vh;
     width: 90%; 
-    height: fit-content; 
     box-sizing: border-box; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+    word-wrap: break-word; 
 }
 
+
 .task-name {
-    /* Make it a block-level element */
-    display: block;
-  
-    /* Set a maximum width for wrapping */
-    max-width: 80%; /* Adjust as needed */
-    text-align: center; /* Optional: Center the text within the container */
-  }
+    width: 100%;
+    text-align: center; 
+    word-wrap: break-word; 
+}
 
 .task:last-child {
     margin-bottom: 1vh;
@@ -108,12 +106,15 @@ ul {
 
 .checkout {
     font-family: fantasy;
+    text-shadow: none;
     margin-top: 1.5vh;
+    font-size: 1.5vh;
+    font-weight: 200;
     border-radius: 18px;
     color: white;
     background-color: rgb(132, 37, 255);
     width: fit-content;
-    padding: 0.3vh 5vh;
+    padding: 0.3vh 2vh;
     cursor: pointer;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -136,6 +137,79 @@ ul {
     pointer-events: auto; /* Enables interaction when visible */
 }
 
+#task-input {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: fantasy;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+.task-input-field{
+    height: 2.5vh;
+    font-family: fantasy;
+    margin-top: 1vh;
+    border-radius: 18px;
+    text-align: center;
+}
+
+#task-form {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    width: 100%;
+}
+
+.create-task-btn {
+    font-family: fantasy;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    border-radius: 18px !important;
+    display: block;
+    max-width: 200px; 
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(0, 195, 255);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.create-task-btn:hover {
+    background-color: rgb(0, 170, 230);
+}
+
+
+.back-btn {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 18px;
+    background-color: rgb(132, 37, 255);
+    font-size: 1.5vh;
+    font-family: fantasy;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+#btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 1vh;
+}
+
+.back-btn:hover {
+    background-color: rgb(103, 29, 199);
+}
 
 @keyframes colorslide {
     0% {
@@ -170,7 +244,6 @@ ul {
     from { width: 0 }
     to { width: 100%; text-shadow: 5px 5px 5px rgba(0, 0, 0, 1); }
   }
-
 
 
 /* https://www.google.com/search?q=typing+animation+css&oq=typing+animation+css&gs_lcrp=EgZjaHJvbWUqDAgAEAAYFBiHAhiABDIMCAAQABgUGIcCGIAEMgwIARAAGBQYhwIYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDczajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:996865ab,vid:yefgBA1CecI,st:0 */
