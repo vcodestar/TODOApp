@@ -6,11 +6,7 @@ Rails.application.routes.draw do
   resources :posts
 
   # Routes for tasks resource
-  resources :tasks, only: [:index, :new, :create, :destroy] do
-    member do
-      patch :complete
-    end
-  end
+  resources :tasks, only: [:index, :new, :create, :destroy] 
 
   # Routes for sessions (login/logout)
   get 'login', to: 'sessions#new', as: 'login'
@@ -23,4 +19,7 @@ Rails.application.routes.draw do
   # Signup routes using resourceful routing for users
   get 'signup', to: 'users#new', as: 'signup'
   resources :users, only: [:new, :create]
+
+  # Add the route here
+  get '/tasks/:id/complete', to: 'tasks#complete', as: :complete_task
 end

@@ -1,10 +1,11 @@
 class TasksController < ApplicationController
   before_action :require_login
   before_action :set_task, only: [:destroy, :complete]
-
+  
   def index
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks.where(completed: false)
   end
+  
 
   def new
     @task = Task.new
@@ -21,12 +22,12 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to dashboard_path, notice: 'Task was successfully deleted.'
+    redirect_to tasks_path, notice: 'Task was successfully deleted.'
   end
 
   def complete
     @task.update(completed: true)
-    redirect_to dashboard_path, notice: 'Task was successfully completed.'
+    redirect_to tasks_path, notice: 'Task was successfully marked as complete.'
   end
 
   private

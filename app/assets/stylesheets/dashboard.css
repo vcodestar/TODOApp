@@ -8,10 +8,6 @@
 
 }
 
-#logout_div {
-    font-family: fantasy;
-}
-
 #add-note {
     font-family: fantasy;
     letter-spacing: 0.5px;
@@ -45,9 +41,10 @@ a .logout_class:hover {
 }
 
 #logout_div {
+    font-family: fantasy;
     position: absolute; 
-    top: 15px; 
-    right: 15px; 
+    top: 1%; 
+    right: 1%; 
     background-color: rgb(132, 37, 255);
     border-radius: 18px;
     width: fit-content;
@@ -154,6 +151,7 @@ h1 {
     margin-top: 1vh;
     border-radius: 18px;
     text-align: center;
+    width: 25vh;
 }
 
 #task-form {
