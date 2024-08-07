@@ -139,7 +139,7 @@ a {
     padding: 1vh 1vh;
 }
 
-a:hover {
+#signup-prompt a:hover {
     background-color: rgb(111, 0, 255);
     border-radius: 18px;
     padding: 1vh 1vh;

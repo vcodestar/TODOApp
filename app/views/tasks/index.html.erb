@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tasks Index</title>
+  <title>Dashboard</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
@@ -10,25 +10,30 @@
 </head>
 <body>
   <div id="container">
-    <h1>Tasks</h1>
+    <h1>Dashboard</h1>
     <p id="welcome">Welcome back, <%= current_user.username %></p>
-    <%= link_to 'Add Task', new_task_path, class: 'button' %>
+    
+    <!-- Updated Add Task Button with link -->
+    <div id="add-note"><%= link_to 'Add Task', new_task_path%><i class="fas fa-plus"></i></div>
 
     <ul>
-    <% @tasks.each do |task| %>
+      <% @tasks.each do |task| %>
         <li class="task <%= 'completed' if task.completed %>">
-        <%= task.name %>
-        <%= link_to 'Check', complete_task_path(task), method: :patch, class: 'button' unless task.completed %>
-        <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+          <div class="task-name"><%= task.name %></div>
+          <% unless task.completed %>
+            <%= link_to complete_task_path(task), method: :patch, class: 'checkout' do %>
+              Check <i class="fas fa-check"></i>
+            <% end %>
+          <% end %>
         </li>
-    <% end %>
+      <% end %>
     </ul>
 
-    <div id="logout_div"><%= link_to 'Log Out', logout_path, method: :delete, class: 'button' %></div>
+    <div id="logout_div"><%= link_to 'Log Out', logout_path, method: :delete, class: "logout_class"%></div>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        document.querySelector('ul').scrollTop = 0;
+      document.querySelector('ul').scrollTop = 0;
     });
   </script>
 </body>

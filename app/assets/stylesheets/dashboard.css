@@ -5,6 +5,11 @@
     max-height: 80vh;
     overflow: hidden; 
     padding: 2vh;
+
+}
+
+#logout_div {
+    font-family: fantasy;
 }
 
 #add-note {
@@ -24,6 +29,19 @@
 
 #add-note:hover {
     background-color: rgb(101, 25, 201);
+}
+
+a .logout_class{
+    width: 200px;
+    background-color: green;
+    border-radius: 18px;
+    padding: 1vh 1vh;
+}
+
+a .logout_class:hover {
+    background-color: green;
+    border-radius: 18px;
+    padding: 1vh 1vh;
 }
 
 #logout_div {
@@ -53,6 +71,7 @@ ul {
     margin: 0;
     height: fit-content; 
     width: 100%;
+    overflow: hidden;
     overflow-y: auto; 
     color: white;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
@@ -74,11 +93,21 @@ ul {
     position: relative;
 }
 
+.task-name {
+    /* Make it a block-level element */
+    display: block;
+  
+    /* Set a maximum width for wrapping */
+    max-width: 80%; /* Adjust as needed */
+    text-align: center; /* Optional: Center the text within the container */
+  }
+
 .task:last-child {
     margin-bottom: 1vh;
 }
 
-.task button {
+.checkout {
+    font-family: fantasy;
     margin-top: 1.5vh;
     border-radius: 18px;
     color: white;
@@ -102,7 +131,7 @@ ul {
 }
 
 
-.task:hover > button {
+.task:hover > .checkout {
     opacity: 1;
     pointer-events: auto; /* Enables interaction when visible */
 }
@@ -141,6 +170,8 @@ ul {
     from { width: 0 }
     to { width: 100%; text-shadow: 5px 5px 5px rgba(0, 0, 0, 1); }
   }
+
+
 
 /* https://www.google.com/search?q=typing+animation+css&oq=typing+animation+css&gs_lcrp=EgZjaHJvbWUqDAgAEAAYFBiHAhiABDIMCAAQABgUGIcCGIAEMgwIARAAGBQYhwIYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDczajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:996865ab,vid:yefgBA1CecI,st:0 */
 
