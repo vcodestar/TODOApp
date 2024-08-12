@@ -21,7 +21,7 @@ body {
     color: red;
 }
 
-#welcome-header {
+.welcome-header {
     display: flex;
     justify-content: center;
     align-items: center;
