@@ -17,8 +17,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#error-list {
+#error-list, #error-msg {
     color: red;
+}
+
+#welcome-header {
+    border: 1px solid red;
 }
 
 @media screen and (max-width: 600px) {

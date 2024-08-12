@@ -5,6 +5,7 @@
     max-height: 80vh;
     overflow: hidden; 
     padding: 2vh;
+    border: 1px solid red;
 
 }
 
@@ -32,6 +33,7 @@ a .logout_class{
     background-color: green;
     border-radius: 18px;
     padding: 1vh 1vh;
+    margin-bottom: 2vh;
 }
 
 a .logout_class:hover {
@@ -52,6 +54,7 @@ a .logout_class:hover {
     padding: 1vh 1vh;
     color: white; 
     text-align: center; 
+    margin-bottom: 2.5vh; /*here*/
 }
 
 #logout_div:hover {
@@ -236,6 +239,7 @@ h1 {
     animation: sliding;
     animation-duration: 2.5s;
     animation-fill-mode: forwards;
+    font-family: fantasy;
 }
 
 @keyframes sliding {
