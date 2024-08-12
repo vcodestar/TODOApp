@@ -11,6 +11,18 @@
 <body>
   <div id="container">
     <h1>Sign Up</h1>
+
+     <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+        <ul id="error-list">
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= form_with model: @user, local: true do |form| %>
       <div id="username">
         <label for="username_input" id="username_label">Username:</label>

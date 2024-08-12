@@ -12,6 +12,13 @@
   <div id="container">
     <h1>Welcome to My TO-DO App!</h1>
     
+    <!-- Error Message Display -->
+    <% if flash[:alert] %>
+      <div id="error_explanation">
+        <p><%= flash[:alert] %></p>
+      </div>
+    <% end %>
+
     <!-- Login Form -->
     <%= form_with url: login_path, method: :post, local: true do |form| %>
       <div id="username">
