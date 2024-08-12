@@ -20,3 +20,9 @@ body {
 #error-list {
     color: red;
 }
+
+@media screen and (max-width: 600px) {
+    * {
+        font-family: "Arai", sans-serif !important;
+    }
+}

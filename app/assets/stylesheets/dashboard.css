@@ -243,6 +243,10 @@ h1 {
     to { width: 100%; text-shadow: 5px 5px 5px rgba(0, 0, 0, 1); }
   }
 
+#error-list {
+    color: red;
+}
+
 
 /* https://www.google.com/search?q=typing+animation+css&oq=typing+animation+css&gs_lcrp=EgZjaHJvbWUqDAgAEAAYFBiHAhiABDIMCAAQABgUGIcCGIAEMgwIARAAGBQYhwIYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzMDczajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:996865ab,vid:yefgBA1CecI,st:0 */
 
