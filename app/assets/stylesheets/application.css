@@ -22,7 +22,11 @@ body {
 }
 
 #welcome-header {
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {
