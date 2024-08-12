@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    username = params[:username].downcase
+    username = params[:username]
     password = params[:password]
 
     Rails.logger.info "Attempting login for username: #{username}"
